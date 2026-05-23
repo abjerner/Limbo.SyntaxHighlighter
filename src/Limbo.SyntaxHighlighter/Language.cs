@@ -6,7 +6,7 @@
 public enum Language {
 
     /// <summary>
-    /// Indiciates that a language isn't specified.
+    /// Indicates that a language isn't specified.
     /// </summary>
     None,
 

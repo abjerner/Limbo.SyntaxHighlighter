@@ -1,7 +1,7 @@
 ﻿namespace Limbo.SyntaxHighlighter.Highlighters;
 
 /// <summary>
-/// Interface desciring a syntax highlighter.
+/// Interface describing a syntax highlighter.
 /// </summary>
 public interface ISyntaxHighlighter {
 

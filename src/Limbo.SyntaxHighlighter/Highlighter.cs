@@ -17,10 +17,10 @@ namespace Limbo.SyntaxHighlighter;
 public static class Highlighter {
 
     /// <summary>
-    /// Gets a reference to the current syntax highligther.
+    /// Gets a reference to the current syntax highlighter.
     /// </summary>
-    /// <remarks>This property provides avaid to access an <see cref="ISyntaxHighlighter"/> in scenarios where
-    /// dependency injection isn't set up or can't be used. If you are using dependency injection, it's recommened
+    /// <remarks>This property provides a way to access an <see cref="ISyntaxHighlighter"/> in scenarios where
+    /// dependency injection isn't set up or can't be used. If you are using dependency injection, it's recommended
     /// adding <see cref="ISyntaxHighlighter"/> to your DI container.</remarks>
     public static ISyntaxHighlighter SyntaxHighlighter { get; } = new Limbo.SyntaxHighlighter.Highlighters.SyntaxHighlighter();
 

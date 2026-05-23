@@ -4,7 +4,7 @@ using ColorCode;
 namespace Limbo.SyntaxHighlighter.Highlighters.JavaScript;
 
 /// <summary>
-/// JavaScript syntax highligther.
+/// JavaScript syntax highlighter.
 /// </summary>
 public class JavaScriptSyntaxHighlighter : IJavaScriptSyntaxHighlighter {
 
@@ -30,7 +30,7 @@ public class JavaScriptSyntaxHighlighter : IJavaScriptSyntaxHighlighter {
             return html;
 
         } catch (Exception) {
-                
+
             return $"<div class=\"highlight javascript\"><pre>{source}</pre></div>";
 
         }

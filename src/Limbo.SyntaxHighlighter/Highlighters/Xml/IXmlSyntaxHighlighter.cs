@@ -3,7 +3,7 @@
 namespace Limbo.SyntaxHighlighter.Highlighters.Xml;
 
 /// <summary>
-/// Interface describing a XML syntax highlighter.
+/// Interface describing an XML syntax highlighter.
 /// </summary>
 public interface IXmlSyntaxHighlighter {
 

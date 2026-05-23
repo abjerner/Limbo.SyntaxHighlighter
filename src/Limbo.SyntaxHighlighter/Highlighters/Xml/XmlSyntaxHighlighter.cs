@@ -4,7 +4,7 @@ using System.Xml.Linq;
 namespace Limbo.SyntaxHighlighter.Highlighters.Xml;
 
 /// <summary>
-/// XML syntax highligther.
+/// XML syntax highlighter.
 /// </summary>
 public class XmlSyntaxHighlighter : XmlSyntaxHighlighterBase, IXmlSyntaxHighlighter {
 

@@ -30,8 +30,8 @@
 
   <!-- Include NuGet dependencies -->
   <ItemGroup>
-	  <PackageReference Include="ColorCode.Core" Version="2.0.13" />
-	  <PackageReference Include="ColorCode.Html" Version="2.0.13" />
+	  <PackageReference Include="ColorCode.Core" Version="2.0.15" />
+	  <PackageReference Include="ColorCode.Html" Version="2.0.15" />
 	  <PackageReference Include="Skybrud.Essentials" Version="1.1.37" />
   </ItemGroup>
 

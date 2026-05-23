@@ -7,7 +7,7 @@ using ColorCode;
 namespace Limbo.SyntaxHighlighter.Highlighters.CSharp;
 
 /// <summary>
-/// JSON syntax highligther.
+/// JSON syntax highlighter.
 /// </summary>
 public class CSharpSyntaxHighlighter : ICSharpSyntaxHighlighter {
 

@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 namespace Limbo.SyntaxHighlighter.Highlighters.Json;
 
 /// <summary>
-/// Class reponsible for converting a JSON string into tokens.
+/// Class responsible for converting a JSON string into tokens.
 /// </summary>
 public class JsonTokenizer {
 

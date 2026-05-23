@@ -8,7 +8,7 @@ using Skybrud.Essentials.Json;
 namespace Limbo.SyntaxHighlighter.Highlighters.Json;
 
 /// <summary>
-/// JSON syntax highligther.
+/// JSON syntax highlighter.
 /// </summary>
 public class JsonSyntaxHighlighter : IJsonSyntaxHighlighter {
 
@@ -20,7 +20,7 @@ public class JsonSyntaxHighlighter : IJsonSyntaxHighlighter {
     /// <param name="source">The JSON source code to be formatted.</param>
     /// <returns>The HTML with the formatted code.</returns>
     public virtual string HighlightJson(string source) {
-           
+
         if (source == null) throw new ArgumentNullException(nameof(source));
 
         try {

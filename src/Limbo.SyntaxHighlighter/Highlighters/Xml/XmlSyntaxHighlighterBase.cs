@@ -4,7 +4,7 @@ using ColorCode;
 namespace Limbo.SyntaxHighlighter.Highlighters.Xml;
 
 /// <summary>
-/// Base class for XML based syntaxt highligthers.
+/// Base class for XML based syntax highlighters.
 /// </summary>
 public class XmlSyntaxHighlighterBase {
         
@@ -12,7 +12,7 @@ public class XmlSyntaxHighlighterBase {
     /// Highlights the specified XML <paramref name="source"/>.
     /// </summary>
     /// <param name="source">The XML source code to be formatted.</param>
-    /// <param name="languageName">The language name - eg. <c>xml</c> or <c>html</c>.</param>
+    /// <param name="languageName">The language name - e.g. <c>xml</c> or <c>html</c>.</param>
     /// <returns>The HTML with the formatted code.</returns>
     protected virtual string Highlight(string source, string languageName) {
 

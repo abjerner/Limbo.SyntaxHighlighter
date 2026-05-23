@@ -3,7 +3,7 @@
 namespace Limbo.SyntaxHighlighter.Highlighters.Html;
 
 /// <summary>
-/// HTML syntax highligther.
+/// HTML syntax highlighter.
 /// </summary>
 public class HtmlSyntaxHighlighter : XmlSyntaxHighlighterBase, IHtmlSyntaxHighlighter {
 
