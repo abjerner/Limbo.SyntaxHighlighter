@@ -30,7 +30,7 @@ public class JsonTokenizer {
         Stack = new Stack<List<object>>();
 
         // Push the root list to the stack
-        Stack.Push(new List<object>());
+        Stack.Push([]);
 
         // Some flags used for the tokenizing
         bool escaped = false;
@@ -154,7 +154,7 @@ public class JsonTokenizer {
     #region Member methods
 
     void Increment() {
-        List<object> list = new List<object>();
+        List<object> list = [];
         Stack.Peek().Add(list);
         Stack.Push(list);
     }
@@ -261,7 +261,7 @@ public class JsonTokenizer {
     /// <param name="source">The JSON source to be tokenized.</param>
     /// <returns>A list of tokens.</returns>
     public static List<object> GetTokens(string source) {
-        JsonTokenizer tokenizer = new JsonTokenizer(source);
+        JsonTokenizer tokenizer = new(source);
         return tokenizer.Stack.Peek();
     }
 

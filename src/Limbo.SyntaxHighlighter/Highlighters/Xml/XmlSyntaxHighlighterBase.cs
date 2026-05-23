@@ -7,7 +7,7 @@ namespace Limbo.SyntaxHighlighter.Highlighters.Xml;
 /// Base class for XML based syntax highlighters.
 /// </summary>
 public class XmlSyntaxHighlighterBase {
-        
+
     /// <summary>
     /// Highlights the specified XML <paramref name="source"/>.
     /// </summary>

@@ -28,7 +28,7 @@ public class CSharpSyntaxHighlighter : ICSharpSyntaxHighlighter {
         html = html.Replace("<span style=\"color:#008000;\">", "<span class=\"comment\">");
         html = html.Replace("<span style=\"color:#A31515;\">", "<span class=\"string\">");
 
-        List<string> lines = new List<string>();
+        List<string> lines = [];
 
         foreach (string str in html.Split('\n')) {
 
@@ -38,7 +38,7 @@ public class CSharpSyntaxHighlighter : ICSharpSyntaxHighlighter {
             line = Regex.Replace(line, "(<span.+?>(static|public|private|protected|internal)<\\/span>) ([a-zA-Z0-9\\.]+) ([a-zA-Z0-9\\.]+)", "$1 $3 <span class=\"identifier\">$4</span>", RegexOptions.Singleline);
             line = Regex.Replace(line, "(<span.+?>(static|public|private|protected|internal)<\\/span>) (<span.+?>(void|long|int|bool|float|double)<\\/span>) ([a-zA-Z0-9\\.]+)", "$1 $3 <span class=\"identifier\">$5</span>", RegexOptions.Singleline);
 
-            List<string> tokens = new List<string>();
+            List<string> tokens = [];
 
             foreach (string tkn in GetLineTokens(line)) {
 
@@ -82,7 +82,7 @@ public class CSharpSyntaxHighlighter : ICSharpSyntaxHighlighter {
 
     private string[] GetLineTokens(string line) {
 
-        List<string> tokens = new List<string>();
+        List<string> tokens = [];
 
         string type = "";
         string hai = "";
