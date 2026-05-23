@@ -3,15 +3,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <LangVersion>9.0</LangVersion>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>12</LangVersion>
+    <TargetFrameworks>netstandard2.0;net10.0</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
     <Version>1.0.0-alpha000</Version>
     <Company>Limbo</Company>
     <Authors>Anders Bjerner</Authors>
-    <Copyright>Copyright © 2022</Copyright>
+    <Copyright>Copyright © $([System.DateTime]::UtcNow.ToString(`yyyy`))</Copyright>
+    <Copyright>Copyright © $([System.DateTime]::UtcNow.ToString(`yyyy`))</Copyright>
     <Title>Limbo SyntaxHighlighter</Title>
     <Description>Library for syntax highlighting in .NET.</Description>
   </PropertyGroup>
@@ -19,7 +20,7 @@
   <!-- Information for the NuGet package -->
   <PropertyGroup>
     <PackageId>Limbo.SyntaxHighlighter</PackageId>
-    <PackageTags>Limbo.SyntaxHighlighter</PackageTags>
+    <PackageTags>Limbo, Skybrud, Syntax Highlighting</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/abjerner/Limbo.SyntaxHighlighter/</PackageProjectUrl>
     <PackageIcon>Limbo.png</PackageIcon>
