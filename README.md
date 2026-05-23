@@ -1,4 +1,4 @@
-# Skybrud.SyntaxHighlighter
+# Limbo SyntaxHighlighter
 
 This package lets you show code examples with syntax highlighting for a few for languages. The syntax highlighting will generate HTML for you yo style using CSS.
 

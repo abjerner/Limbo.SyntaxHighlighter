@@ -1,6 +1,6 @@
-src/Skybrud.SyntaxHighlighter/obj/
-src/Skybrud.SyntaxHighlighter/packages/
-src/Skybrud.SyntaxHighlighter/bin/
+src/Limbo.SyntaxHighlighter/obj/
+src/Limbo.SyntaxHighlighter/packages/
+src/Limbo.SyntaxHighlighter/bin/
 src/packages/
 *.user
 *.suo
