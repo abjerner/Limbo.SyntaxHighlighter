@@ -1,56 +1,54 @@
 ﻿using System.Text.RegularExpressions;
 using ColorCode;
 
-namespace Limbo.SyntaxHighlighter.Highlighters.Xml {
+namespace Limbo.SyntaxHighlighter.Highlighters.Xml;
 
-    /// <summary>
-    /// Base class for XML based syntaxt highligthers.
-    /// </summary>
-    public class XmlSyntaxHighlighterBase {
+/// <summary>
+/// Base class for XML based syntaxt highligthers.
+/// </summary>
+public class XmlSyntaxHighlighterBase {
         
-        /// <summary>
-        /// Highlights the specified XML <paramref name="source"/>.
-        /// </summary>
-        /// <param name="source">The XML source code to be formatted.</param>
-        /// <param name="languageName">The language name - eg. <c>xml</c> or <c>html</c>.</param>
-        /// <returns>The HTML with the formatted code.</returns>
-        protected virtual string Highlight(string source, string languageName) {
+    /// <summary>
+    /// Highlights the specified XML <paramref name="source"/>.
+    /// </summary>
+    /// <param name="source">The XML source code to be formatted.</param>
+    /// <param name="languageName">The language name - eg. <c>xml</c> or <c>html</c>.</param>
+    /// <returns>The HTML with the formatted code.</returns>
+    protected virtual string Highlight(string source, string languageName) {
 
-            var formatter = new HtmlFormatter();
+        var formatter = new HtmlFormatter();
 
-            string html = formatter.GetHtmlString(source, Languages.Xml);
+        string html = formatter.GetHtmlString(source, Languages.Xml);
 
-            html = html.Replace("<div style=\"color:#000000;background-color:#FFFFFF;\">", $"<div class=\"highlight {languageName}\">");
+        html = html.Replace("<div style=\"color:#000000;background-color:#FFFFFF;\">", $"<div class=\"highlight {languageName}\">");
 
-            html = html.Replace("<span style=\"color:#0000FF;\">&lt;?</span>", "<span class=\"operator\">&lt;?</span>");
-            html = html.Replace("<span style=\"color:#0000FF;\">?&gt;</span>", "<span class=\"operator\">?&gt;</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">&lt;?</span>", "<span class=\"operator\">&lt;?</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">?&gt;</span>", "<span class=\"operator\">?&gt;</span>");
 
-            html = html.Replace("<span style=\"color:#0000FF;\">&lt;</span>", "<span class=\"operator\">&lt;</span>");
-            html = html.Replace("<span style=\"color:#0000FF;\">&gt;</span>", "<span class=\"operator\">&gt;</span>");
-            html = html.Replace("<span style=\"color:#0000FF;\">&lt;/</span>", "<span class=\"operator\">&lt;/</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">&lt;</span>", "<span class=\"operator\">&lt;</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">&gt;</span>", "<span class=\"operator\">&gt;</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">&lt;/</span>", "<span class=\"operator\">&lt;/</span>");
 
-            html = html.Replace("<span style=\"color:#0000FF;\">&lt;![CDATA[</span>", "<span class=\"cdata\">&lt;![CDATA[</span>");
-            html = html.Replace("<span style=\"color:#0000FF;\">]]&gt;</span>", "<span class=\"cdata\">]]&gt;</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">&lt;![CDATA[</span>", "<span class=\"cdata\">&lt;![CDATA[</span>");
+        html = html.Replace("<span style=\"color:#0000FF;\">]]&gt;</span>", "<span class=\"cdata\">]]&gt;</span>");
 
-            html = html.Replace("<span style=\"color:#A31515;\">", "<span class=\"element\">");
-            html = html.Replace("<span style=\"color:#FF0000;\">", "<span class=\"attribute\">");
-            html = html.Replace("<span style=\"color:#0000FF;\">", "<span class=\"string\">");
-            html = html.Replace("<span style=\"color:#000000;\">&quot;</span>", "<span class=\"quot\">&quot;</span>");
+        html = html.Replace("<span style=\"color:#A31515;\">", "<span class=\"element\">");
+        html = html.Replace("<span style=\"color:#FF0000;\">", "<span class=\"attribute\">");
+        html = html.Replace("<span style=\"color:#0000FF;\">", "<span class=\"string\">");
+        html = html.Replace("<span style=\"color:#000000;\">&quot;</span>", "<span class=\"quot\">&quot;</span>");
 
-            html = html.Replace("<span class=\"string\">=</span>", "<span class=\"operator\">=</span>");
+        html = html.Replace("<span class=\"string\">=</span>", "<span class=\"operator\">=</span>");
 
-            html = html.Replace("<span style=\"color:#008000;\">", "<span class=\"comment\">");
+        html = html.Replace("<span style=\"color:#008000;\">", "<span class=\"comment\">");
 
-            html = Regex.Replace(
-                html,
-                "(<span class=\"cdata\">&lt;!\\[CDATA\\[</span>)<span style=\"color:#808080;\">(()?(.+?))</span>(<span class=\"cdata\">\\]\\]&gt;</span>)",
-                "$1<span class=\"cdatavalue\">$2</span>$5",
-                RegexOptions.Singleline
-            );
+        html = Regex.Replace(
+            html,
+            "(<span class=\"cdata\">&lt;!\\[CDATA\\[</span>)<span style=\"color:#808080;\">(()?(.+?))</span>(<span class=\"cdata\">\\]\\]&gt;</span>)",
+            "$1<span class=\"cdatavalue\">$2</span>$5",
+            RegexOptions.Singleline
+        );
 
-            return html;
-
-        }
+        return html;
 
     }
 
