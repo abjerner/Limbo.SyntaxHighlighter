@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Skybrud.Essentials.Json;
+using Skybrud.Essentials.Json.Newtonsoft;
 
 namespace Limbo.SyntaxHighlighter.Highlighters.Json;
 
